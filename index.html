@@ -54,12 +54,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(250,246,239,
 .hero-frame{position:relative;border-radius:6px;overflow:hidden;box-shadow:0 40px 70px -30px rgba(44,39,35,0.35);}
 .hero-frame img{width:100%;height:480px;object-fit:cover;object-position:center 35%;}
 .hero-visual .sobre-badge{position:absolute;bottom:-22px;left:-22px;}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold-deep);margin-bottom:26px;}
+.hero-eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold-deep);margin:0 auto 26px;}
 .hero-eyebrow::before{content:'';width:30px;height:1px;background:var(--gold-deep);}
 .hero h1{font-family:'Fraunces',serif;font-size:clamp(36px,4.6vw,58px);font-weight:500;line-height:1.14;color:var(--ink);margin-bottom:22px;letter-spacing:-0.3px;}
 .hero h1 em{font-style:italic;color:var(--gold-deep);font-weight:500;}
 .hero-sub{font-size:16px;line-height:1.8;color:var(--taupe);max-width:440px;margin-bottom:36px;}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px;}
+.hero-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:34px;}
 .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--white);padding:15px 28px;border-radius:2px;font-size:13px;font-weight:500;letter-spacing:0.5px;text-decoration:none;transition:background 0.3s,transform 0.2s;}
 .btn-primary:hover{background:var(--gold-deep);transform:translateY(-2px);}
 .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink);padding:15px 28px;border-radius:2px;border:1px solid rgba(44,39,35,0.25);font-size:13px;letter-spacing:0.5px;text-decoration:none;transition:all 0.3s;}
@@ -139,8 +139,13 @@ section{padding:100px 0;}
 .contato-item .val{font-size:15px;color:var(--ink);}
 .contato-item a.val{text-decoration:none;}
 .contato-item a.val:hover{color:var(--gold-deep);}
-.contato-map{border-radius:4px;overflow:hidden;min-height:340px;box-shadow:0 30px 60px -30px rgba(44,39,35,0.3);}
-.contato-map iframe{width:100%;height:100%;border:0;min-height:340px;}
+.contato-map{position:relative;border-radius:6px;overflow:hidden;min-height:340px;box-shadow:0 30px 60px -30px rgba(44,39,35,0.35);border:6px solid var(--white);outline:1px solid rgba(176,141,87,0.25);}
+.contato-map iframe{width:100%;height:100%;border:0;min-height:340px;filter:sepia(28%) saturate(85%) brightness(1.02) contrast(0.96);}
+.map-card{position:absolute;left:18px;bottom:18px;background:var(--white);border-radius:4px;padding:16px 18px;box-shadow:0 14px 30px -12px rgba(44,39,35,0.4);max-width:230px;z-index:2;}
+.map-card .lbl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-deep);margin-bottom:5px;font-weight:600;}
+.map-card .addr{font-size:12.5px;line-height:1.5;color:var(--ink);margin-bottom:10px;}
+.map-card a{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--gold-deep);text-decoration:none;}
+.map-card a:hover{text-decoration:underline;}
 
 /* ---------- FOOTER ---------- */
 footer{background:var(--ink);padding:52px 32px 34px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;}
@@ -398,6 +403,11 @@ footer{background:var(--ink);padding:52px 32px 34px;display:flex;flex-direction:
     </div>
     <div class="contato-map reveal">
       <iframe src="https://www.google.com/maps?q=R.%20Ap%C3%B3stolo%20Paschoal%2C%20295%2C%20Canasvieiras%2C%20Florian%C3%B3polis%20-%20SC%2C%2088054-100&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização do consultório Dra. Ana Padilha"></iframe>
+      <div class="map-card">
+        <div class="lbl">Dra. Ana Padilha</div>
+        <div class="addr">R. Apóstolo Paschoal, 295 — Canasvieiras, Florianópolis - SC</div>
+        <a href="https://www.google.com/maps?q=R.%20Ap%C3%B3stolo%20Paschoal%2C%20295%2C%20Canasvieiras%2C%20Florian%C3%B3polis%20-%20SC%2C%2088054-100" target="_blank">Ver no Google Maps →</a>
+      </div>
     </div>
   </div>
 </section>
